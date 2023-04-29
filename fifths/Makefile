@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS= -Wall -Werror -fPIC
 INCLUDES=
 LIBS=-lm
-PLUGIN_NAME=@PLUGIN_NAME@
+PLUGIN_NAME=fifths
 BUILD_DIR=build
 PLUGIN_DIR = $(BUILD_DIR)/$(PLUGIN_NAME).lv2
 DIRS= $(BUILD_DIR) $(PLUGIN_DIR)
@@ -10,10 +10,10 @@ $(shell mkdir -p $(DIRS))
 
 SRC_DIR = src
 
-SOURCES = $(SRC_DIR)/$(PLUGIN_NAME).c
+SOURCES = $(SRC_DIR)/fifths.c
 
 DATA = manifest.ttl \
-			 $(PLUGIN_NAME).ttl
+			 fifths.ttl
 
 PLUGIN_DATA = $(patsubst %,$(PLUGIN_DIR)/%,$(DATA))
 
