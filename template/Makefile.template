@@ -10,10 +10,10 @@ $(shell mkdir -p $(DIRS))
 
 SRC_DIR = src
 
-SOURCES = $(SRC_DIR)/test.c
+SOURCES = $(SRC_DIR)/$(PLUGIN_NAME).c
 
 DATA = manifest.ttl \
-			 test.ttl
+			 $(PLUGIN_NAME).ttl
 
 PLUGIN_DATA = $(patsubst %,$(PLUGIN_DIR)/%,$(DATA))
 
